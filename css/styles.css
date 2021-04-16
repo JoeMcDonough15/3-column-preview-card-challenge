@@ -1,0 +1,96 @@
+/************************** TAG SELECTORS *************************************/
+a {
+  font-size: smaller;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  padding: 160px 0 0;
+  width: 1440px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.2em;
+  font-weight: bolder;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.7;
+  font-size: small;
+  font-weight: lighter;
+  margin: 2em auto 7em;
+  opacity: 0.7;
+
+}
+
+
+
+/************************** CLASS SELECTORS *************************************/
+
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.btn {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 28px;
+  padding: 15px 35px;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 60%;
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 70px 38px 70px 70px;
+}
+
+.one {
+  color: hsl(31, 77%, 52%);
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 70px 38px 70px 70px;
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+  padding: 70px 38px 70px 70px;
+}
+
+.three {
+  color: hsl(179, 100%, 13%);
+}
+
+.two {
+  color: hsl(184, 100%, 22%);
+}
