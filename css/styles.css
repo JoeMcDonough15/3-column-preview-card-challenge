@@ -1,96 +1,151 @@
-/************************** TAG SELECTORS *************************************/
-a {
-  font-size: smaller;
-  font-weight: lighter;
-  text-decoration: none;
+:root {
+
+    /* custom properties */
+
+    /* color */
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --very-light-grey: hsl(0, 0%, 95%);
+    --white-text: hsla(0, 0%, 100%, 0.75);
+
+    /* typography */
+
+    --header-font: "Big Shoulders Display";
+    --text-font: "Lexend Deca";
+
+    /* border style */ 
+
+    --border-style: 8px;
+    --remove-border-style: none;
 }
 
-body {
-  background-color: hsl(0, 0%, 95%);
-  color: hsla(0, 0%, 100%, 0.75);
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0;
-  padding: 160px 0 0;
-  width: 1440px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {   
+    align-items: center;
+    background-color: var(--very-light-grey);
+    display: flex;
+    color: var(--white-text);
+    font-family: var(--text-font); 
+    font-size: 0.9375rem;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1 {
-  font-family: "Big Shoulders Display", cursive;
-  font-size: 2.2em;
-  font-weight: bolder;
-  opacity: 1;
-  text-transform: uppercase;
+    color: var(--very-light-grey);
+    font-family: var(--header-font);
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
 }
 
-p {
-  line-height: 1.7;
-  font-size: small;
-  font-weight: lighter;
-  margin: 2em auto 7em;
-  opacity: 0.7;
-
+a {
+    color: #000;
+    text-decoration: none;
 }
 
-
-
-/************************** CLASS SELECTORS *************************************/
-
-
-.attribution {
-  font-size: 11px; text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.container {  
+    display: grid;
+    grid-template-columns: 1;
+    padding: 5em 0;
+    margin: 0 auto;
 }
 
-.btn {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 28px;
-  padding: 15px 35px;
+.card {
+    max-width: 326px;
+    padding: 45px;
 }
 
-.btn:hover {
-  background-color: transparent;
-  border: 2px solid hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 100%);
+.card:first-child {
+    border-top-left-radius: var(--border-style);
+    border-top-right-radius: var(--border-style);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  width: 60%;
-}
-
-.luxury {
-  background-color: hsl(179, 100%, 13%);
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  padding: 70px 38px 70px 70px;
-}
-
-.one {
-  color: hsl(31, 77%, 52%);
+.card:last-child {
+    border-bottom-left-radius: var(--border-style);
+    border-bottom-right-radius: var(--border-style); 
 }
 
 .sedans {
-  background-color: hsl(31, 77%, 52%);
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
-  padding: 70px 38px 70px 70px;
+    background-color: var(--bright-orange);
 }
 
 .suvs {
-  background-color: hsl(184, 100%, 22%);
-  padding: 70px 38px 70px 70px;
+    background-color: var(--dark-cyan);
 }
 
-.three {
-  color: hsl(179, 100%, 13%);
+.luxury {
+    background-color: var(--very-dark-cyan);
 }
 
-.two {
-  color: hsl(184, 100%, 22%);
+.card-header {
+    margin: 40px 0;
+}
+
+.card-text {
+    line-height: 1.8;
+}
+
+.card-btn {
+    background-color: var(--very-light-grey);
+    border: 2px solid #fff;
+    border-radius: 1.8em;
+    margin-top: 25px;
+    padding: 1.1em 2.5em;
+}
+
+.card-btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card-btn:hover .btn-text {
+    color: var(--very-light-grey);
+}
+
+.btn-one-text, .btn-two-text, .btn-three-text {
+    font-weight: bold;
+}
+
+.btn-one-text {
+    color: var(--bright-orange);
+}
+
+.btn-two-text {
+    color: var(--dark-cyan);
+}
+
+.btn-three-text {
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width: 900px) {
+    
+    .container {
+        grid-template-columns:  1fr 1fr 1fr;
+    }
+
+    .card {
+        max-width: 307px;
+    }
+
+    .card:first-child {
+        border-bottom-left-radius: var(--border-style);    
+        border-top-right-radius: var(--remove-border-style);
+    }
+
+    .card:last-child {
+        border-bottom-left-radius: var(--remove-border-style);
+        border-top-right-radius: var(--border-style);
+    }
+
+    .card-btn {
+        margin-top: 85px;
+    }
 }
