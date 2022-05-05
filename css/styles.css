@@ -117,23 +117,8 @@ a {
 
 .card-btn:hover {
   background-color: transparent;
-  cursor: pointer;
-}
-
-.card-btn:hover {
   color: var(--very-light-grey);
-}
-
-.btn-one-text {
-  color: var(--bright-orange);
-}
-
-.btn-two-text {
-  color: var(--dark-cyan);
-}
-
-.btn-three-text {
-  color: var(--very-dark-cyan);
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
